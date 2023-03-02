@@ -2,7 +2,7 @@ import React from 'react';
 import image from '../assets/images/logo-DH.png';
 import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
-import LastMovieInDb from './LastMovieInDb';
+import LastProductInDB from './LastProductInDB';
 import ContentRowMovies from './ContentRowMovies';
 import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
@@ -47,7 +47,7 @@ function SideBar({ totalProductos, totalUsuarios, totalCategorias }){
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
+                    <Link className="nav-link" to="/LastProductInDB">
                         <i className="fas fa-fw fa-chart-area"></i>
                         <span>Charts</span></Link>
                 </li>
@@ -79,8 +79,8 @@ function SideBar({ totalProductos, totalUsuarios, totalCategorias }){
             <Route path="/GenresInDb">
                 <GenresInDb />
             </Route>
-            <Route path="/LastMovieInDb">
-                <LastMovieInDb />
+            <Route path="/LastProductInDB">
+                <LastProductInDB />
             </Route>
             <Route path="/ContentRowMovies">
                 <ContentRowMovies />
@@ -98,8 +98,8 @@ function SideBar({ totalProductos, totalUsuarios, totalCategorias }){
                 <Route path="/GenresInDb">
                     <GenresInDb />
                 </Route>
-                <Route path="/LastMovieInDb">
-                    <LastMovieInDb />
+                <Route path="/LastProductInDB">
+                    <LastProductInDB />
                 </Route>
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies />

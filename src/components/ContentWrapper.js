@@ -2,6 +2,10 @@ import React from 'react';
 import TopBar from './TopBar';
 import ContentRowTop from './ContentRowTop';
 import Footer from './Footer';
+import ContentRowCenter from './ContentRowCenter';
+
+
+
 function ContentWrapper({ totalProductos, totalUsuarios, totalCategorias }){
     return (
         <React.Fragment>
@@ -14,6 +18,7 @@ function ContentWrapper({ totalProductos, totalUsuarios, totalCategorias }){
                       totalProductos={totalProductos}
                       totalUsuarios={totalUsuarios}
                       totalCategorias={totalCategorias} />
+                    <ContentRowCenter />
                     <Footer />
                 </div>
             </div>    

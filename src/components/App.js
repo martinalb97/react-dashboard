@@ -15,7 +15,9 @@ function App() {
     }).catch(error => {
       console.log(error)
     })
-  })
+  },[])
+
+ 
   return (
     <React.Fragment>
       	<div id="wrapper">
@@ -24,7 +26,9 @@ function App() {
             totalUsuarios={totalUsuarios}
             totalCategorias={totalCategorias}
           />
+
         </div>
+
     </React.Fragment>
   );
 }
