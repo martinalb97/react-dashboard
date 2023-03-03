@@ -6,7 +6,6 @@ function GenresInDb() {
   useEffect(() => {
     fetch('http://localhost:3000/api/categoryProduct').then(rsp => {
       rsp.json().then(rsp => {
-        console.log(rsp)
         setCategorias(rsp)
       })
     }).catch(error => {

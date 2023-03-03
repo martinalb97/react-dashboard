@@ -1,10 +1,11 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/logo.png';
 import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
 import LastProductInDB from './LastProductInDB';
 import ContentRowMovies from './ContentRowMovies';
 import SearchMovies from './SearchMovies';
+import Chart from './Chart';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -28,7 +29,7 @@ function SideBar({ totalProductos, totalUsuarios, totalCategorias }){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Print to 3D</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -41,7 +42,7 @@ function SideBar({ totalProductos, totalUsuarios, totalCategorias }){
                 <li className="nav-item">
                 <Link className="nav-link" to="/GenresInDb">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Categorias</span>
                     </Link>
                 </li>
 
@@ -49,24 +50,24 @@ function SideBar({ totalProductos, totalUsuarios, totalCategorias }){
                 <li className="nav-item">
                     <Link className="nav-link" to="/LastProductInDB">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <span>Ultimo Producto</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/ContentRowMovies">
+                <Link className="nav-link" to="/Chart">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Lista de Productos</span></Link>
                 </li>
                 
-                {/*<!-- Buscador -->*/}
+                {/*<!-- Buscador 
                 <li className="nav-item nav-link">
                     <Link className="nav-link" to="/SearchMovies">
                         <i className="fas fa-search"></i>
                         <span>Search a movie</span>
                     </Link>
                 </li>
-
+                -->*/}
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
@@ -103,6 +104,9 @@ function SideBar({ totalProductos, totalUsuarios, totalCategorias }){
                 </Route>
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies />
+                </Route>
+                <Route path="/Chart">
+                    <Chart />
                 </Route>
                 <Route path="/SearchMovies">
                     <SearchMovies />

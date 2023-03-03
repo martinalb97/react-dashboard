@@ -6,7 +6,6 @@ function LastProductInDB(){
   useEffect(() => {
     fetch('http://localhost:3000/api/lastProduct').then(rsp => {
       rsp.json().then(rsp => {
-        console.log(rsp)
         setUltimoProducto(rsp)
       })
     }).catch(error => {

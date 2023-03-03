@@ -4,7 +4,7 @@ import ChartRow from "./ChartRow";
 function Chart() {
 	const [Productos, setProductos] = useState([]);
 	useEffect(() => {
-		fetch("http://localhost:3000/api/Products")
+		fetch("http://localhost:3000/api/users")
 			.then((rsp) => {
 				rsp.json().then((rsp) => {
 					setProductos(rsp.data);
