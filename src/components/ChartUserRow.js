@@ -5,8 +5,8 @@ function ChartRow(props){
     return (
                 <tr>
                     <td>{props.name}</td>
-                    <td>{props.short_description}</td>
-                    <td>{props.price}</td>
+                    <td>{props.apellido}</td>
+                    <td>{props.email}</td>
                 </tr>
             )
     }

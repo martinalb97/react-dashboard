@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import ChartRow from "./ChartRow";
+import ChartUserRow from "./ChartUserRow";
 
-function Chart() {
-	const [Productos, setProductos] = useState([]);
+function ChartUser() {
+	const [Usuarios, setUsuarios] = useState([]);
 	useEffect(() => {
 		fetch("http://localhost:3000/api/users")
 			.then((rsp) => {
 				rsp.json().then((rsp) => {
-					setProductos(rsp.data);
 					console.log(rsp.data);
+					setUsuarios(rsp.data);
 				});
 			})
 			.catch((error) => {
@@ -28,20 +28,20 @@ function Chart() {
 						<thead>
 							<tr>
 								<th>Nombre</th>
-								<th>Descripcion Corta</th>
-								<th>Precio</th>
+								<th>Apellido</th>
+								<th>email</th>
 							</tr>
 						</thead>
 						<tfoot>
 							<tr>
 								<th>Nombre</th>
-								<th>Descripcion Corta</th>
-								<th>Precio</th>
+								<th>Apellido</th>
+								<th>email</th>
 							</tr>
 						</tfoot>
 						<tbody>
-							{Productos.map((row, i) => {
-								return <ChartRow {...row} key={i} />;
+							{Usuarios.map((row, i) => {
+								return <ChartUserRow {...row} key={i} />;
 							})}
 						</tbody>
 					</table>
@@ -51,4 +51,4 @@ function Chart() {
 	);
 }
 
-export default Chart;
+export default ChartUser;

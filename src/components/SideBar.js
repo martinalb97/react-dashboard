@@ -6,6 +6,7 @@ import LastProductInDB from './LastProductInDB';
 import ContentRowMovies from './ContentRowMovies';
 import SearchMovies from './SearchMovies';
 import Chart from './Chart';
+import ChartUser from './ChartUser';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -59,7 +60,11 @@ function SideBar({ totalProductos, totalUsuarios, totalCategorias }){
                         <i className="fas fa-fw fa-table"></i>
                         <span>Lista de Productos</span></Link>
                 </li>
-                
+                <li className="nav-item nav-link">
+                <Link className="nav-link" to="/ChartUser">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Lista de Usuarios</span></Link>
+                </li>                
                 {/*<!-- Buscador 
                 <li className="nav-item nav-link">
                     <Link className="nav-link" to="/SearchMovies">
@@ -107,6 +112,9 @@ function SideBar({ totalProductos, totalUsuarios, totalCategorias }){
                 </Route>
                 <Route path="/Chart">
                     <Chart />
+                </Route>
+                <Route path="/ChartUser">
+                    <ChartUser />
                 </Route>
                 <Route path="/SearchMovies">
                     <SearchMovies />

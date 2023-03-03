@@ -6,6 +6,7 @@ function ChartRow(props){
                 <tr>
                     <td>{props.name}</td>
                     <td>{props.short_description}</td>
+                    <td>{props.long_description}</td>
                     <td>{props.price}</td>
                 </tr>
             )

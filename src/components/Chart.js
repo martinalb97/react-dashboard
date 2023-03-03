@@ -8,7 +8,6 @@ function Chart() {
 			.then((rsp) => {
 				rsp.json().then((rsp) => {
 					setProductos(rsp.data);
-					console.log(rsp.data);
 				});
 			})
 			.catch((error) => {
